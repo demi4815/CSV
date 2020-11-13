@@ -21,4 +21,9 @@ public class Person
         this.salary = salary;
     }
 
+    public long getId()
+    {
+        return id;
+    }
+
 }

@@ -11,4 +11,9 @@ public class Subdivision
         this.id = autoId++;
         this.name = name;
     }
+
+    public String getName()
+    {
+        return name;
+    }
 }
