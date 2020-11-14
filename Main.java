@@ -1,7 +1,5 @@
 package Karina.pr4;
 
-import com.opencsv.CSVReader;
-
 import java.io.*;
 
 
@@ -10,9 +8,12 @@ public class Main {
     public static void main(String[] args) throws IOException {
         try
         {
-            //String csvFilePath = "D:\\CSV\\src\\Karina\\pr4\\foreign_names.csv";
 
-            //CSVReader csvReader = new CSVReader(new FileReader(csvFilePath));
+            /**
+             * Java класс BufferedReader читает текст из потока ввода символов,
+             * буферизуя прочитанные символы, чтобы обеспечить эффективное считывание символов,
+             * массивов и строк. Можно указать в конструкторе вторым параметром размер буфера.
+             */
 
             File file = new File("D:\\CSV\\src\\Karina\\pr4\\foreign_names.csv");
             FileReader fr = new FileReader(file);
@@ -20,7 +21,16 @@ public class Main {
 
             String str;
 
-            while ((str= reader.readLine()) != null)
+            str = reader.readLine(); //Пропускаем первую строку с названиями столбцов
+
+            /**
+             * Метод split() в Java разделяет данную строку вокруг данного регулярного выражения.
+             */
+
+            ListOfPerson listOfPerson = new ListOfPerson();
+            ListOfSubdivisions listOfSubdivisions = new ListOfSubdivisions();
+
+            /*while ((str = reader.readLine()) != null)
             {
                 String[] contents = str.split(";");
                 for (String cell : contents)
@@ -28,15 +38,22 @@ public class Main {
                     System.out.print(cell);
                 }
                 System.out.println();
+            }*/
+
+            while ((str = reader.readLine()) != null)
+            {
+                String[] content = str.split(";");
+                listOfPerson.addPerson(
+                        Long.valueOf(content[0]),
+                        content[1],
+                        content[2],
+                        content[3],
+                        listOfSubdivisions.getSubdivision(content[4]),
+                        Long.valueOf(content[5]));
             }
         }
-
-        catch (FileNotFoundException e) {
-// TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        catch (IOException e) {
-// TODO Auto-generated catch block
+        catch (IOException e)
+        {
             e.printStackTrace();
         }
 

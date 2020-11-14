@@ -1,6 +1,5 @@
 package Karina.pr4;
 
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -8,7 +7,7 @@ public class ListOfPerson
 {
     private List<Person> personList = new LinkedList<>();
 
-    public void addPerson(long id, String name, String gender, Date birthDate, Subdivision subdivision, long salary)
+    public void addPerson(long id, String name, String gender, String birthDate, Subdivision subdivision, long salary)
     {
         boolean flag = false;
 

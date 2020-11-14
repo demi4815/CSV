@@ -7,23 +7,19 @@ public class ListOfSubdivisions
 {
     private List<Subdivision> subdivisionList = new LinkedList<>();
 
-    public void addSubdivision(String name)
+    public Subdivision getSubdivision(String name)
     {
-        boolean flag = false;
-
         for (Subdivision subdivision : subdivisionList)
         {
             if (subdivision.getName().equals(name))
             {
-                flag = true;
+                return subdivision;
             }
         }
 
-        if(!flag)
-        {
-            Subdivision subdivision = new Subdivision(name);
-            subdivisionList.add(subdivision );
-        }
+        Subdivision subdivision = new Subdivision(name);
+        subdivisionList.add(subdivision );
+        return subdivision;
     }
 
 }
