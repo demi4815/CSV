@@ -1,7 +1,5 @@
 package Karina.pr4;
 
-
-
 public class Person
 {
     private long id;
@@ -24,6 +22,18 @@ public class Person
     public long getId()
     {
         return id;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "id " + id +
+                ", name " + name +
+                ", gender " + gender +
+                ", date of birth" + birthDate +
+                ", subdivision " + subdivision.name +
+                ", id of subdivision " + subdivision.id +
+                ", salary " + salary;
     }
 
 }

@@ -2,9 +2,9 @@ package Karina.pr4;
 
 public class Subdivision
 {
-    private static long autoId = 1;
-    private long id;
-    private String name;
+    public static long autoId = 1;
+    public long id;
+    public String name;
 
     public Subdivision(String name)
     {

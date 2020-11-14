@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ListOfPerson
 {
-    private List<Person> personList = new LinkedList<>();
+    public List<Person> personList = new LinkedList<>();
 
     public void addPerson(long id, String name, String gender, String birthDate, Subdivision subdivision, long salary)
     {

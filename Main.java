@@ -2,7 +2,6 @@ package Karina.pr4;
 
 import java.io.*;
 
-
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -30,16 +29,6 @@ public class Main {
             ListOfPerson listOfPerson = new ListOfPerson();
             ListOfSubdivisions listOfSubdivisions = new ListOfSubdivisions();
 
-            /*while ((str = reader.readLine()) != null)
-            {
-                String[] contents = str.split(";");
-                for (String cell : contents)
-                {
-                    System.out.print(cell);
-                }
-                System.out.println();
-            }*/
-
             while ((str = reader.readLine()) != null)
             {
                 String[] content = str.split(";");
@@ -51,10 +40,14 @@ public class Main {
                         listOfSubdivisions.getSubdivision(content[4]),
                         Long.valueOf(content[5]));
             }
+
+            for (Person person : listOfPerson.personList) {
+                System.out.println(person.toString());
+            }
         }
         catch (IOException e)
         {
-            e.printStackTrace();
+            e.printStackTrace();//Поможет определить, какой метод вызывает ошибку.
         }
 
     }
