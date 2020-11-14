@@ -1,5 +1,14 @@
 package Karina.pr4;
 
+/**
+ * Сущность Человек с полями:
+ * ID
+ * Имя
+ * Пол
+ * Подразделение(Сущность подразделение)
+ * Зарплата
+ * Дата рождения
+ */
 public class Person
 {
     private long id;
@@ -9,6 +18,9 @@ public class Person
     private Subdivision subdivision;
     private long salary;
 
+    /**
+     * Конструктор
+     */
     public Person(long id, String name, String gender, String birthDate, Subdivision subdivision, long salary)
     {
         this.id = id;
@@ -19,18 +31,26 @@ public class Person
         this.salary = salary;
     }
 
+    /**
+     * Геттер для ID
+     * @return ID
+     */
     public long getId()
     {
         return id;
     }
 
+    /**
+     * Вывод информации консоль о человеке(переопределение метода toString())
+     * @return строка с информацией
+     */
     @Override
     public String toString()
     {
         return "id " + id +
                 ", name " + name +
                 ", gender " + gender +
-                ", date of birth" + birthDate +
+                ", date of birth " + birthDate +
                 ", subdivision " + subdivision.name +
                 ", id of subdivision " + subdivision.id +
                 ", salary " + salary;

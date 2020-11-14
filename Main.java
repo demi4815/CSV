@@ -7,12 +7,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         try
         {
-
-            /**
-             * Java класс BufferedReader читает текст из потока ввода символов,
-             * буферизуя прочитанные символы, чтобы обеспечить эффективное считывание символов,
-             * массивов и строк. Можно указать в конструкторе вторым параметром размер буфера.
-             */
+            //Java класс BufferedReader читает текст из потока ввода символов,
+            //буферизуя прочитанные символы, чтобы обеспечить эффективное считывание символов,
+            //массивов и строк. Можно указать в конструкторе вторым параметром размер буфера.
 
             File file = new File("D:\\CSV\\src\\Karina\\pr4\\foreign_names.csv");
             FileReader fr = new FileReader(file);
@@ -22,16 +19,12 @@ public class Main {
 
             str = reader.readLine(); //Пропускаем первую строку с названиями столбцов
 
-            /**
-             * Метод split() в Java разделяет данную строку вокруг данного регулярного выражения.
-             */
-
             ListOfPerson listOfPerson = new ListOfPerson();
             ListOfSubdivisions listOfSubdivisions = new ListOfSubdivisions();
 
             while ((str = reader.readLine()) != null)
             {
-                String[] content = str.split(";");
+                String[] content = str.split(";");// Метод split() в Java разделяет данную строку вокруг данного выражения.
                 listOfPerson.addPerson(
                         Long.valueOf(content[0]),
                         content[1],
