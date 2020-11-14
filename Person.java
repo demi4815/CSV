@@ -11,12 +11,12 @@ package Karina.pr4;
  */
 public class Person
 {
-    private long id;
-    private String name;
-    private String gender;
-    private String birthDate;
-    private Subdivision subdivision;
-    private long salary;
+    public long id;
+    public String name;
+    public String gender;
+    public String birthDate;
+    public Subdivision subdivision;
+    public long salary;
 
     /**
      * Конструктор

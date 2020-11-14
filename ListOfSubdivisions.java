@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ListOfSubdivisions
 {
-    private List<Subdivision> subdivisionList = new LinkedList<>();
+    public List<Subdivision> subdivisionList = new LinkedList<>();
 
     /**
      * Метод, который возвращает нужное подразделение, если оно существует, или создает новое,
